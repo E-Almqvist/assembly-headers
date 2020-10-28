@@ -1,4 +1,4 @@
-; Shortcuts for calls etc
+; This is the base file that needs to be included for the other macros etc to work.
 STDIN_FILENO    equ 0
 STDOUT_FILENO   equ 1
 STDERR_FILENO   equ 2
@@ -368,3 +368,13 @@ ASCII_VERTICAL_TAB equ 11
 ASCII_LINEBREAK equ 10
 ASCII_CARRIAGE_RETURN equ 13
 ASCII_CLEAR equ 12
+
+; Macro to end program
+_endProgram:
+	mov rax, SYS_EXIT
+	syscall
+
+%macro exit 1
+	mov rdi, %1
+	jmp _endProgram				; Macro to end/exit the program
+%endmacro

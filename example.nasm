@@ -1,4 +1,5 @@
-%include "headers/print.nasm"
+%include "base/linux.nasm"
+%include "macros/printstr.nasm"
 
 section .data
 	helloString db "Hello world!", ASCII_LINEBREAK

@@ -1,4 +1,4 @@
-%include "base.nasm"			; Include the predefined "vars"
+%include "headers/base.nasm"			; Include the predefined "vars"
 
 _print:							; NOTE Takes the rax register as input
 	push rax

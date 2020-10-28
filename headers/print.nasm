@@ -20,16 +20,7 @@ _printLoop:
 
 	ret
 
-_endProgram:
-	mov rax, SYS_EXIT
-	mov rdi, 0
-	syscall
-
 %macro print 1					; Macro to print stuff
 	mov rax, %1
 	call _print
-%endmacro
-
-%macro exit 0
-	jmp _endProgram				; Macro to end/exit the program
 %endmacro

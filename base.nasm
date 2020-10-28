@@ -359,3 +359,13 @@ MLOCK2  equ 325
 COPY_FILE_RANGE equ 326
 PREADV2 equ 327
 PWRITEV2    equ 328
+
+; Exit program
+_endProgram:
+	mov rax, SYS_EXIT
+	syscall
+
+%macro exit 1
+	mov rdi, %1
+	jmp _endProgram				; Macro to end/exit the program
+%endmacro

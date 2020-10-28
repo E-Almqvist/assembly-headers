@@ -1,9 +1,9 @@
 ; Macro to print ASCII strings
-_print:							; NOTE Takes the rax register as input
+_printstr:							; NOTE Takes the rax register as input
 	push rax
 	mov rdx, 0
 
-_printLoop:
+_printstrLoop:
 	inc rax
 	inc rbx						; String size count
 	mov cl, [rax]				; Incrementor
@@ -19,7 +19,7 @@ _printLoop:
 
 	ret
 
-%macro print 1					; Macro to print stuff
+%macro printstr 1					; Macro to print stuff
 	mov rax, %1
-	call _print
+	call _printstr
 %endmacro

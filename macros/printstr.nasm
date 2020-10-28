@@ -9,11 +9,11 @@ _printstrLoop:
 	mov cl, [rax]				; Incrementor
 
 	cmp cl, 0				; Check if we have reached the end of the string
-	jne _printLoop				; If not then do another iteration
+	jne _printstrLoop			; If not then do another iteration
 
 	mov rax, SYS_WRITE
 	mov rdi, STDIN
-	pop rsi					; Move rax into rsi (from the stack)
+	pop rsi
 	mov rdx, rbx
 	syscall
 

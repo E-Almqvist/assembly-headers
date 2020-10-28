@@ -368,13 +368,3 @@ ASCII_VERTICAL_TAB equ 11
 ASCII_LINEBREAK equ 10
 ASCII_CARRIAGE_RETURN equ 13
 ASCII_CLEAR equ 12
-
-; Exit program
-_endProgram:
-	mov rax, SYS_EXIT
-	syscall
-
-%macro exit 1
-	mov rdi, %1
-	jmp _endProgram				; Macro to end/exit the program
-%endmacro

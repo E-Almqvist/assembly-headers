@@ -1,5 +1,4 @@
-%include "headers/base.nasm"			; Include the predefined "vars"
-
+; Macro to print ASCII strings
 _print:							; NOTE Takes the rax register as input
 	push rax
 	mov rdx, 0

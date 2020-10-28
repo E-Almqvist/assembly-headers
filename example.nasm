@@ -4,10 +4,11 @@
 section .data
 	helloString db "Hello world!", ASCII_LINEBREAK
 
-section .bss
-
 section .text
 	global _start
+
+; This is not finished. Do not use these includes
+; FIXME: example.nasm:13: error: parser: instruction expected
 
 _start:
 	print helloString	 		; This will print "Hello world!\n".	NOTE: macro is included on line 2

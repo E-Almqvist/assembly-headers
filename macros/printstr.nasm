@@ -1,4 +1,5 @@
 ; Macro to print ASCII strings
+
 _printstr:					; NOTE Takes the rax register as input
 	push rax
 	mov rdx, 0

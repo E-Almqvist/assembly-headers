@@ -16,10 +16,10 @@ _digitToASCII:
 ; %1: the integer
 ; %2: string buffer
 
-%macro digit_to_str 2
+%macro digit_to_str 1
 	push %1
 	call _digitToASCII
-	pop %2
+	pop rax
 %endmacro
 
 %macro int_to_str 2

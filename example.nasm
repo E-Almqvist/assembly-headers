@@ -19,8 +19,8 @@ _start:
 	printstr helloString	 		; This will print "Hello world!\n".	NOTE: macro is included on line 2
 	printstr testString			; This will print "Hello there!\n"
 
-	digit_to_str two digitStr
-	printstr digitStr
+	digit_to_str two
+	printstr rax
 	printstr linebreak
 
 	exit 0					; End the program with exitcode 0.	NOTE: macro is included on line 1 (base file)

@@ -6,13 +6,20 @@ ASCII_NUM_OFFSET equ 48		; ASCII number characters have the 48 offset
 _digitToASCII:
 	pop ah	 			; Move the input from the stack to 8bit ah register
 	add ah, ASCII_NUM_OFFSET	; More than 8 bits is not needed as it is from 0-9
-	mov rax, ah			; return the ASCII character
+	push ah				; return the ASCII character to the stack
+
+	ret
 
 
 
 ; Takes two arguments
 ; %1: the integer
 ; %2: string buffer
+
+%macro digit_to_str 2
+	push %1
+	call _digitToASCII
+%endmacro
 
 %macro int_to_str 2
 

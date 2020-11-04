@@ -19,6 +19,7 @@ _digitToASCII:
 %macro digit_to_str 2
 	push %1
 	call _digitToASCII
+	pop %2
 %endmacro
 
 %macro int_to_str 2

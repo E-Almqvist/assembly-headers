@@ -2,8 +2,8 @@
 %include "macros/printstr.nasm"		; Print String macro.
 
 section .data
-	helloString db "Hello world!", ASCII_LINEBREAK, ASCII_END
-	testString db "Hello there!", ASCII_LINEBREAK, ASCII_END
+	helloString db "Hello world!", ASCII_LINEBREAK, ASCII_END ; Important to include a ASCII_END otherwise ASCII
+	testString db "Hello there!", ASCII_LINEBREAK, ASCII_END  ; will think that the string never ended.
 
 section .text
 	global _start

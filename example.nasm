@@ -21,6 +21,7 @@ _start:
 	printstr testString			; This will print "Hello there!\n"
 
 	digit_to_str numbertwo
+	pop rax
 	printstr rax
 	printstr linebreak
 

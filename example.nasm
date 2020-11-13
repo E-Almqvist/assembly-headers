@@ -8,6 +8,8 @@ section .data
 
 	linebreak db ASCII_LINEBREAK, ASCII_END
 
+	numbertwo db 2
+
 section .bss
 	digitStr resb 1		; Reserv 1 byte for the character
 
@@ -18,8 +20,7 @@ _start:
 	printstr helloString	 		; This will print "Hello world!\n".	NOTE: macro is included on line 2
 	printstr testString			; This will print "Hello there!\n"
 
-	digit_to_str 2
-	pop rax
+	digit_to_str numbertwo
 	printstr rax
 	printstr linebreak
 
